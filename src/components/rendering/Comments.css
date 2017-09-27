@@ -1,0 +1,52 @@
+#comments-container {
+	margin: 1vh 2vw 1vh 2vw;
+}
+
+#story-url {
+	text-decoration: none;
+	color: red;
+}
+
+#comments-hr {
+	min-width: 20vw;
+	max-width: 50vw;
+	color: red;
+}
+
+.comments-list {
+	list-style: none;
+	max-width: 100%;
+	margin: 1vh 2vw 1vh 2vw;
+}
+
+.comments-list li {
+	max-width: 100%;
+	overflow-wrap: break-word;
+}
+
+.comment-details {
+	color: red;
+	display: flex;
+}
+
+.comment-details a,
+.comment-details a:active,
+.comment-details a:hover,
+.comment-details a:visited {
+	text-decoration: none;
+	color: red;
+}
+
+.comment-detail-child {
+	margin-right: 10px;
+}
+
+.the-comment {
+	overflow-wrap: break-word;
+}
+
+pre,
+code {
+	overflow-wrap: break-word;
+	white-space: pre-wrap;
+}

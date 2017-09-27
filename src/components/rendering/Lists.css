@@ -1,0 +1,100 @@
+
+#hacker-list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	padding: 0px 2em 0px 1rem;
+	width: 100%;
+}
+
+#hacker-list li {
+	margin-left: 0px;
+}
+
+.item-number {
+	min-width: 2em;
+	color: red;
+}
+
+.story-link {
+	color: black;
+}
+
+.story-link:active,
+.story-link:hover,
+.story-link:visited {
+	color: #555;
+}
+
+.user-link {
+	color: #555;
+}
+
+.user-id:hover,
+.user-id:active {
+	color: red;
+}
+
+.list-item {
+	display: flex;
+}
+
+.item-comments,
+.item-comments:active,
+.item-comments:hover,
+.item-comments:visited {
+	text-decoration: none;
+	color: red;
+}
+
+.item-comments-span {
+	display: flex;
+	flex-direction: row;
+	min-width: 1rem;
+}
+
+.detail-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.detail-box a {
+	text-decoration: none;
+}
+
+/*.detail-child {
+	margin-bottom: 1em;
+}*/
+
+.detail-box-bottom {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	-webkit-box-shadow:0px 1px 0px #555;
+ 	-moz-box-shadow:0px 1px 0px #555;
+ 	box-shadow:0px 1px 0px #555;
+}
+
+.detail-box-bottom .bottom-child:first-child {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	overflow-wrap: break-word;
+}
+.detail-box-bottom .bottom-child:first-child p:first-child {
+	display: flex;
+}
+
+.score-star {
+	color: red;
+}
+
+#pager a,
+#pager a:active,
+#pager a:hover,
+#pager a:visited {
+	text-decoration: none;
+	color: red;
+}

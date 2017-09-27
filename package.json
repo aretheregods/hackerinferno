@@ -1,0 +1,19 @@
+{
+  "name": "hackerinferno",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "history": "^4.7.2",
+    "inferno": "^3.9.0",
+    "inferno-component": "^3.9.0",
+    "inferno-router": "^3.9.0",
+    "inferno-scripts": "4.2.0",
+    "normalizr": "^3.2.3"
+  },
+  "scripts": {
+    "start": "inferno-scripts start",
+    "build": "inferno-scripts build",
+    "test": "inferno-scripts test --env=jsdom",
+    "eject": "inferno-scripts eject"
+  }
+}
