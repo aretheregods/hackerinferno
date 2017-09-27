@@ -36,7 +36,9 @@ function Hacker_Comments(props) {
 				}
 			}
 
-			return icv(he, 'div', 'comments-list', response, {style: `margin-left: ${k + 1}`})
+            // The margin of each comment sub-list is
+            // The amount of the index of that sub-array in pixels
+			return icv(he, 'div', 'comments-list', response, {style: `margin-left: ${k + 2}px`})
 
 		})
 

@@ -10,10 +10,10 @@ import {
 import { User_Hacker } from './components/rendering/User';
 import { Comments_Hacker } from './components/rendering/Comments';
 
-/*
-
-*/
-
+// Simplest Route Configuration.
+// Inferno makes it seemingly impossible
+// To have virtually all functional components
+// & highlighted tabs on dynamic routing
 export const routes = (
 	<Route component={App}>
         <IndexRoute path="/" component={News_Hacker} onEnter={() => window.scrollTo(0, 0)}></IndexRoute>
