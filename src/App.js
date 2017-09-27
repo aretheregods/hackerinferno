@@ -35,12 +35,12 @@ export function App({ children }) {
 							fill="freeze" />
 							</path>
 						</g>
-					</svg>&nbsp;Top
+					</svg>&nbsp;<h3>Top</h3>
 				</IndexLink>
-				<Link to="/newest/1" className="tab" activeClassName="active">New</Link>
-				<Link to="/show/1" className="tab" activeClassName="active">Show</Link>
-				<Link to="/ask/1" className="tab" activeClassName="active">Ask</Link>
-				<Link to="/jobs/1" className="tab" activeClassName="active">Jobs</Link>
+				<Link to="/newest/1" className="tab" activeClassName="active"><h3>New</h3></Link>
+				<Link to="/show/1" className="tab" activeClassName="active"><h3>Show</h3></Link>
+				<Link to="/ask/1" className="tab" activeClassName="active"><h3>Ask</h3></Link>
+				<Link to="/jobs/1" className="tab" activeClassName="active"><h3>Jobs</h3></Link>
 			</nav>
 			<div id="data-container">{children}</div>
 		</div>
