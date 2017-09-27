@@ -28,18 +28,6 @@ function Hacker_List(props) {
                     {item.user &&
                         <Link to={'/user/' + item.user} className="detail-child user-link">by <span className="user-id">{item.user}</span></Link>
                     }
-                    {/* <div className="detail-child detail-box-bottom">
-                        <div className="bottom-child">
-                            <p className="score-number">
-                                {item.points || "0"} <span className="score-star">{String.fromCharCode(9734)}&mdash;</span>
-                            </p>
-                            <p>{item.time_ago}&mdash;</p>
-                        </div>
-                        <Link to={'/item/'  + item.id} className="bottom-child item-comments"> {!item.comments_count ?
-                            <span className="item-comments-span"><p>Discuss&nbsp;</p></span> :
-                            <span className="item-comments-span"><p>{item.comments_count}&nbsp;</p><p>comments</p></span>
-                        }</Link>
-                    </div> */}
                     <p className="detail-child detail-box-bottom">
                     {item.points || "0"}
                     <span className="score-star">{String.fromCharCode(9734)}&nbsp;</span>

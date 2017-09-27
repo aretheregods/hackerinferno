@@ -39,6 +39,14 @@
   	}
 }
 
+@media screen
+	and (min-device-width: 240px)
+	and (max-device-width: 568px) {
+		#tabs-container {
+			justify-content: center;
+		}
+	}
+
 
 #tabs-layout-container {
 	display: flex;
@@ -47,18 +55,13 @@
 }
 
 #tabs-container {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	min-height: 10vh;
-}
-
-#tabs-container {
 	width: 100%;
+	min-height: 10vh;
 	max-height: 15vh;
 	background: #555;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 }
 
 #tabs-container svg {
