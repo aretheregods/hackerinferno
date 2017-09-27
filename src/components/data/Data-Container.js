@@ -30,7 +30,7 @@ function DataContainer(type) {
                     super(props)
                     this.state = {
                         component_data: [],
-                        component: '',
+                        component: 'news',
                         page: 1,
                         loadingComponent: true
                     }
