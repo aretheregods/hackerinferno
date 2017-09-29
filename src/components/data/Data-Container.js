@@ -39,7 +39,7 @@ function DataContainer(type) {
                     }
                 }
 
-                componentDidMount() {
+                componentWillMount() {
                     const data_url = urlobj[endpoint](this.props.params.page);
                     fetch(data_url)
                     .then(data => data.json())
@@ -53,7 +53,7 @@ function DataContainer(type) {
                         this.setState({
                             component_data: data,
                             component: endpoint,
-                            page: this.props.params.page,
+                            page: this.props.params.page || 1,
                             loadingComponent: false,
                             error: false
                         });
@@ -81,7 +81,7 @@ function DataContainer(type) {
                             this.setState({
                                 component_data: data,
                                 component: endpoint,
-                                page: nextProps.params.page,
+                                page: nextProps.params.page || 1,
                                 loadingComponent: false,
                                 error: false
                             });
