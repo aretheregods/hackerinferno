@@ -1,7 +1,6 @@
 import { DC } from '../constants/Constants';
 import { hn_api_pages } from '../constants/API';
 import { Link } from 'inferno-router';
-import './Lists.css';
 
 // The Pure Functional Component Format that all main list pages follow
 function Hacker_List(props) {

@@ -9,6 +9,7 @@ import {
 } from './components/rendering/Lists';
 import { User_Hacker } from './components/rendering/User';
 import { Comments_Hacker } from './components/rendering/Comments';
+import { Error } from './components/rendering/Error';
 
 // Simplest Route Configuration.
 // Inferno makes it seemingly impossible
@@ -24,5 +25,6 @@ export const routes = (
 		<Route path="/ask/:page" component={Ask_Hacker} onEnter={() => window.scrollTo(0, 0)}></Route>
 		<Route path="/user/:page" component={User_Hacker}></Route>
 		<Route path="/item/:page" component={Comments_Hacker} onEnter={() => window.scrollTo(0, 0)}></Route>
+		<Route path="*" component={Error}></Route>
 	</Route>
 )

@@ -10,7 +10,7 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="/main.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/main.css"> -->
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,8 +24,323 @@
     <style type="text/css" media="screen">
       html,
       body {
-        font-family: Roboto, Helvetica, Trebuchet, Ubuntu, Arial, Sans-Serif;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    	  font-size-adjust: 0.5;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: #F5F5F5;
       }
+      * {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+      #app {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          height: 100%;
+      }
+      @media screen
+        and (min-device-width: 1200px)
+        and (max-device-width: 1600px)
+        and (-webkit-min-device-pixel-ratio: 1) {
+          #data-container {
+            display: flex;
+            justify-content: center;
+          }
+
+          #tabs-container {
+            width: 50vw;
+          }
+
+          #hacker-list {
+            width: 80vw;
+            max-width: 80%;
+          }
+
+          #comments-container {
+            min-width: 92%;
+          }
+
+          #user-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+          }
+      }
+
+      @media screen
+        and (min-device-width: 1200px)
+        and (max-device-width: 1600px)
+        and (-webkit-min-device-pixel-ratio: 2)
+        and (min-resolution: 192dpi) {
+          #hacker-list {
+            width: 60vw;
+            max-width: 75%;
+          }
+      }
+
+      @media screen
+        and (min-device-width: 240px)
+        and (max-device-width: 767px) {
+          #tabs-container {
+            justify-content: center;
+          }
+
+          #tabs-container a {
+            left: -2em;
+          }
+
+          #tabs-container a:first-child {
+            margin-left: 0px;
+          }
+
+          #tabs-container svg {
+            margin-left: 0px;
+          }
+      }
+
+      @media screen
+        and (min-device-width: 240px)
+        and (max-device-width: 359px) {
+          #tabs-container {
+            font-size: 75%;
+          }
+      }
+
+
+      #tabs-layout-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+      }
+
+      #tabs-container {
+        width: 100%;
+        min-height: 10vh;
+        max-height: 15vh;
+        background: #555;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size-adjust: 0.5;
+      }
+
+      #tabs-container svg {
+        margin-left: 1em;
+      }
+
+      #tabs-container a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1em;
+      }
+
+      #tabs-container a:active,
+      #tabs-container a:visited,
+      #tabs-container a:hover {
+        text-decoration: none;
+      }
+
+      .tab {
+        color: #F5F5F5;
+      }
+
+      .active {
+        color: red;
+      }
+
+      #hacker-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 2em 0px 1rem;
+        width: 100%;
+      }
+
+      #hacker-list li {
+        margin-left: 0px;
+      }
+
+      .item-number {
+        min-width: 2em;
+        color: red;
+      }
+
+      .story-link {
+        color: black;
+      }
+
+      .story-link:active,
+      .story-link:hover,
+      .story-link:visited {
+        color: #555;
+      }
+
+      .user-link {
+        color: #555;
+      }
+
+      .user-id:hover,
+      .user-id:active {
+        color: red;
+      }
+
+      .list-item {
+        display: flex;
+      }
+
+      .item-comments,
+      .item-comments:active,
+      .item-comments:hover,
+      .item-comments:visited {
+        text-decoration: none;
+        color: red;
+      }
+
+      .item-comments-span {
+        display: flex;
+        flex-direction: row;
+        min-width: 1rem;
+      }
+
+      .detail-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .detail-box a {
+        text-decoration: none;
+      }
+
+      /*.detail-child {
+        margin-bottom: 1em;
+      }*/
+
+      .detail-box-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        -webkit-box-shadow:0px 1px 0px #555;
+        -moz-box-shadow:0px 1px 0px #555;
+        box-shadow:0px 1px 0px #555;
+      }
+
+      .detail-box-bottom .bottom-child:first-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        overflow-wrap: break-word;
+      }
+      .detail-box-bottom .bottom-child:first-child p:first-child {
+        display: flex;
+      }
+
+      .score-star {
+        color: red;
+      }
+
+      #pager a,
+      #pager a:active,
+      #pager a:hover,
+      #pager a:visited {
+        text-decoration: none;
+        color: red;
+      }
+      #comments-container {
+        margin: 1vh 2vw 1vh 2vw;
+      }
+
+      #story-url {
+        text-decoration: none;
+        color: red;
+      }
+
+      #comments-hr {
+        min-width: 20vw;
+        max-width: 50vw;
+        color: red;
+      }
+
+      .comments-list {
+        list-style: none;
+        max-width: 100%;
+        margin: 1vh 2vw 1vh 2vw;
+      }
+
+      .comments-list li {
+        max-width: 100%;
+        overflow-wrap: break-word;
+      }
+
+      .comment-details {
+        color: red;
+        display: flex;
+      }
+
+      .comment-details a,
+      .comment-details a:active,
+      .comment-details a:hover,
+      .comment-details a:visited {
+        text-decoration: none;
+        color: red;
+      }
+
+      .comment-detail-child {
+        margin-right: 10px;
+      }
+
+      .the-comment {
+        overflow-wrap: break-word;
+      }
+
+      pre,
+      code {
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+      }
+
+      #user-container  {
+          max-width: 100%;
+          margin: 1vh 2vw 2vh 2vw;
+          text-align: center;
+      }
+
+      #user-about {
+          max-width: 90%;
+      }
+
+      #hacker-links a {
+          text-decoration: none;
+          color: red;
+      }
+
+      #hacker-links a:first-child {
+          margin-left: 0px;
+      }
+
+      #error-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          height: 90vh;
+      }
+
     </style>
   </head>
   <body>

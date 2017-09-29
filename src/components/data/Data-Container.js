@@ -1,6 +1,7 @@
 import Component from 'inferno-component';
 import { icv } from '../constants/Constants';
 import { HackerLoading } from '../rendering/Loading';
+import { Error } from '../rendering/Error';
 
 
 // Fetch is hot garbage in some browsers,
@@ -30,9 +31,11 @@ function DataContainer(type) {
                     super(props)
                     this.state = {
                         component_data: [],
+                        error_data: [],
                         component: 'news',
                         page: 1,
-                        loadingComponent: true
+                        loadingComponent: true,
+                        error: false
                     }
                 }
 
@@ -40,14 +43,26 @@ function DataContainer(type) {
                     const data_url = urlobj[endpoint](this.props.params.page);
                     fetch(data_url)
                     .then(data => data.json())
+                    .catch(() => {
+                        this.setState({
+                            loadingComponent: false,
+                            error: true
+                        })
+                    })
                     .then(data => {
                         this.setState({
                             component_data: data,
                             component: endpoint,
                             page: this.props.params.page,
-                            loadingComponent: false
+                            loadingComponent: false,
+                            error: false
                         });
-                        console.log(data)
+                    })
+                    .catch(() => {
+                        this.setState({
+                            loadingComponent: false,
+                            error: true
+                        })
                     })
                 }
 
@@ -55,25 +70,45 @@ function DataContainer(type) {
                     if(nextProps.params.page !== this.props.params.page){
                         const data_url = urlobj[endpoint](this.props.params.page);
                         fetch(data_url)
-                        .then(data => {
-                            data.json();
+                        .then(data => data.json())
+                        .catch(() => {
+                            this.setState({
+                                loadingComponent: false,
+                                error: true
+                            })
                         })
                         .then(data => {
                             this.setState({
                                 component_data: data,
                                 component: endpoint,
                                 page: nextProps.params.page,
-                                loadingComponent: false
+                                loadingComponent: false,
+                                error: false
                             });
-                            console.log(data)
+                        })
+                        .catch(() => {
+                            this.setState({
+                                loadingComponent: false,
+                                error: true
+                            })
                         })
                     }
                 }
 
-                render({params}) {
-                    return !this.state.loadingComponent ?
-                        icv(16, type, null, null, { ...this.state, ...this.props }) :
-                        icv(8, HackerLoading)
+                render({ params }) {
+                    var the_view;
+
+                    
+                    if(this.state.loadingComponent){
+                        the_view = icv(8, HackerLoading)
+                    } else if(this.state.error) {
+                        the_view = icv(8, Error)
+                    } else {
+                        the_view = icv(8, type, null, null, {...this.state, ...this.props})
+                    }
+
+                    return the_view;
+                    
                 }
             }
         }

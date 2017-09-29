@@ -1,6 +1,5 @@
 import { icv, he, DC } from '../constants/Constants';
 import { hn_api_pages } from '../constants/API';
-import './User.css'
 
 function Hacker_User(props) {
 
