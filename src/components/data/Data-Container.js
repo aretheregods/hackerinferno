@@ -22,7 +22,7 @@ window.fetch = function(url) {
     })
 }
 
-// Just handle all of the data in one HOC state container because "Why not?".
+// Just handle all of the data in one HOC because "Why not?".
 function DataContainer(type) {
     return function(urlobj) {
         return function(endpoint) {
