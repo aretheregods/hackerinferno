@@ -32,15 +32,15 @@ function DataContainer(type) {
                     this.state = {
                         component_data: [],
                         error_data: [],
-                        component: 'news',
+                        component: "",
                         page: 1,
                         loadingComponent: true,
                         error: false
                     }
                 }
 
-                componentWillMount() {
-                    const data_url = urlobj[endpoint](this.props.params.page);
+                componentDidMount(props) {
+                    const data_url = urlobj[endpoint](this.props.params.page || 1);
                     fetch(data_url)
                     .then(data => data.json())
                     .catch(() => {
@@ -68,7 +68,7 @@ function DataContainer(type) {
 
                 componentWillReceiveProps(nextProps) {
                     if(nextProps.params.page !== this.props.params.page){
-                        const data_url = urlobj[endpoint](this.props.params.page);
+                        const data_url = urlobj[endpoint](this.props.params.page || 1);
                         fetch(data_url)
                         .then(data => data.json())
                         .catch(() => {
