@@ -5,6 +5,6 @@ export function Error() {
         icv(he, 'h3', null, "Something Went Wrong..."),
         icv(he, 'h3', null, "We Couldn't Find That Data."),
         icv(he, 'h3', null, "Maybe Try Again.")
-    ], {id: 'error-container'}
+    ], {style: 'display:flex;flex-direction:column;justify-content:center;align-items:center;height: 90vh;text-align: center'}
     );
 }

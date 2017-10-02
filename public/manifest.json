@@ -1,6 +1,6 @@
 {
-  "short_name": "Hacker Inferno",
-  "name": "Hacker Inferno: Hacker News PWA",
+  "short_name": "Inferno HN",
+  "name": "Inferno Hacker News: Hacker News PWA",
   "icons": [
     {
       "src": "favicon.ico",
@@ -16,5 +16,5 @@
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "red",
-  "background_color": "#F5F5F5"
+  "background_color": "#494949"
 }
