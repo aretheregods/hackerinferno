@@ -7,9 +7,7 @@
     "inferno": "^3.9.0",
     "inferno-component": "^3.9.0",
     "inferno-router": "^3.9.0",
-    "inferno-scripts": "4.2.0",
-    "normalizr": "^3.2.3",
-    "worker-loader": "^1.0.0"
+    "inferno-scripts": "4.2.0"
   },
   "scripts": {
     "start": "inferno-scripts start",

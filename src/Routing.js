@@ -17,7 +17,7 @@ import { Error } from './components/rendering/Error';
 // & highlighted tabs on dynamic routing
 export const routes = (
 	<Route component={App}>
-        <IndexRoute path="/" component={News_Hacker} onEnter={() => window.scrollTo(0, 0)}></IndexRoute>
+        <IndexRoute component={News_Hacker} onEnter={() => window.scrollTo(0, 0)}></IndexRoute>
 		<Route path="/:page" component={News_Hacker} onEnter={() => window.scrollTo(0, 0)}></Route>
 		<Route path="/newest/:page" component={Newest_Hacker} onEnter={() => window.scrollTo(0, 0)}></Route>
 		<Route path="/show/:page" component={Show_Hacker} onEnter={() => window.scrollTo(0, 0)}></Route>
