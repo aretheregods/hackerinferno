@@ -1,5 +1,5 @@
 import {DataContainer} from '../../data/Data-Container';
-import { Hacker_List } from '../Lists';
+import { Hacker_List } from '../List';
 import { Hacker_Comments } from '../Comments';
 import { Hacker_User } from '../User';
 import { hn_api_pages } from '../../constants/API';
