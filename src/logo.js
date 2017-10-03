@@ -1,4 +1,4 @@
-export function logo({ width, height, repeat }) {
+export function Logo({ width, height, repeat }) {
   return (
     <svg
       version="1.0"

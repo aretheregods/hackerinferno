@@ -1,74 +1,51 @@
-import { icv, he, DC } from '../constants/Constants';
-import { hn_api_pages } from '../constants/API';
+import { Comment } from './Comment';
+import { Story } from './Story';
 
+function make_comments_list(hacker_obj) {
 
-function Hacker_Comments(props) {
+    // Get the values of the data object
+    const j = Object.values(hacker_obj).map(function find_comments(i, k) {
+
+        // What will be returned inside each list
+        var response = [];
+
+        // Check each data object to see if it's an array with stuff inside
+        // If it is, it's the one we want
+        if(typeof i === 'object' && i !== null) {
+            for(let obj of i) {
+                response.push(<Comment obj={obj} nested_comments={make_comments_list(obj)}/>)
+            }
+        }
+
+        // The margin of each comment sub-list is
+        // The amount of the index of that sub-array plus 2 in pixels
+        return <div className="comments-list" style={{"margin-left":`${k + 2}px`}}>{response}</div>
+
+    })
+
+    return j;
+
+};
+
+export function Hacker_Comments(props) {
 
     const data = props.component_data;
     const comments_state = data.comments_count
 
-	function make_comments_list(hacker_obj) {
 
-		// Get the values of the data object
-		const j = Object.values(hacker_obj).map(function find_comments(i, k) {
-
-			// What will be returned inside each list
-			var response = [];
-
-			// Check each data object to see if it's an array with stuff inside
-			// If it is, it's the one we want
-			if(typeof i === 'object' && i !== null) {
-
-				// Recursively check each object in the array in the same fashion
-				// And make list items out of the data
-				for(let obj of i) {
-					response.push(icv(he, 'div', null, [
-						icv(he, 'div', 'comment', [
-							icv(he, 'div', 'comment-details', [
-								icv(he, 'a', 'comment-detail-child', icv(he, 'p', null, `${obj["user"]}`), {href: `/user/${obj["user"]}`}),
-								icv(he, 'p', 'comment-detail-child',`${obj["time_ago"]}`)
-							]),
-							icv(he, 'div', 'the-comment', null, {dangerouslySetInnerHTML: {__html: obj["content"]}})
-						]),
-						make_comments_list(obj)])
-					)
-				}
-			}
-
-            // The margin of each comment sub-list is
-            // The amount of the index of that sub-array in pixels
-			return icv(he, 'div', 'comments-list', response, {style: `margin-left: ${k + 2}px`})
-
-		})
-
-		return j;
-
-	};
-
-    const story_data = icv(he, 'div', null, [
-            icv(he, 'div', null, [
-            	icv(he, 'a', null, data.title, {href: data.url, id: "story-url"}),
-            	icv(he, 'div', null, [
-                    icv(he, 'p', null, [
-                    	data.user && "by " + data.user + " ",
-                    	data.time_ago + " | ",
-                    	`${data.points || "0"} ${String.fromCharCode(9734)}`
-                    ])
-            	])
-            ], {id: 'story-info'}),
-            icv(he, 'div', null, [
-            	    icv(he, 'div', null, [
-            	    	icv(he, 'hr', null, null, {id: 'comments-hr'}),
-            	    	icv(he, 'h4', null, `${data.comments ? comments_state : "Loading..."} Comments`)
-            	    ]),
-            	    make_comments_list(data)
-            	], {id: 'comments-list'}
-            )
-        ], {id: 'comments-container'}
+    const story_data = (
+        <div id="comments-container">
+            <Story story={data}/>
+            <div id="comments-list">
+                <div>
+                    <hr id="comments-hr"/>
+                    <h4>{data.comments ? comments_state : "Loading..."} Comments</h4>
+                </div>
+                {make_comments_list(data)}
+            </div>
+        </div>
     )
 
     return story_data;
 
 }
-
-export const Comments_Hacker = DC(Hacker_Comments)(hn_api_pages)('item');

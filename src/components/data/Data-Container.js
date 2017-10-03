@@ -1,5 +1,4 @@
 import Component from 'inferno-component';
-import { icv } from '../constants/Constants';
 import { HackerLoading } from '../rendering/Loading';
 import { Error } from '../rendering/Error';
 
@@ -23,7 +22,7 @@ window.fetch = function(url) {
 }
 
 // Just handle all of the data in one HOC because "Why not?".
-function DataContainer(type) {
+function DataContainer(Type) {
     return function(urlobj) {
         return function(endpoint) {
             return class extends Component {
@@ -31,7 +30,6 @@ function DataContainer(type) {
                     super(props)
                     this.state = {
                         component_data: [],
-                        error_data: [],
                         component: "",
                         page: 1,
                         loadingComponent: true,
@@ -39,7 +37,7 @@ function DataContainer(type) {
                     }
                 }
 
-                componentDidMount(props) {
+                componentDidMount() {
                     const data_url = urlobj[endpoint](this.props.params.page || 1);
                     fetch(data_url)
                     .then(data => data.json())
@@ -98,21 +96,22 @@ function DataContainer(type) {
                 render({ params }) {
                     var the_view;
 
-                    
+
                     if(this.state.loadingComponent){
-                        the_view = icv(8, HackerLoading)
+                        the_view = <HackerLoading/>
                     } else if(this.state.error) {
-                        the_view = icv(8, Error)
+                        the_view = <Error/>
                     } else {
-                        the_view = icv(8, type, null, null, {...this.state, ...this.props})
+                        the_view = <Type {...this.state} {...this.props}/>
                     }
 
                     return the_view;
-                    
+
                 }
             }
         }
     }
 };
+
 
 export { DataContainer }
