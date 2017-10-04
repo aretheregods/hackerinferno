@@ -48,13 +48,13 @@ function DataContainer(Type) {
                         })
                     })
                     .then(data => {
-                        this.setState({
+                        this.setState((prevState, props) => ({
                             component_data: data,
                             component: endpoint,
-                            page: this.props.params.page || 1,
+                            page: props.params.page || 1,
                             loadingComponent: false,
                             error: false
-                        });
+                        }));
                     })
                     .catch(() => {
                         this.setState({
@@ -73,22 +73,22 @@ function DataContainer(Type) {
                             this.setState({
                                 loadingComponent: false,
                                 error: true
-                            })
+                            }))
                         })
                         .then(data => {
-                            this.setState({
+                            this.setState((prevState, props) => ({
                                 component_data: data,
                                 component: endpoint,
-                                page: nextProps.params.page || 1,
+                                page: props.params.page || 1,
                                 loadingComponent: false,
                                 error: false
-                            });
+                            }));
                         })
                         .catch(() => {
                             this.setState({
                                 loadingComponent: false,
                                 error: true
-                            })
+                            }))
                         })
                     }
                 }
