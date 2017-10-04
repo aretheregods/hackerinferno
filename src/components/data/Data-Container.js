@@ -73,7 +73,7 @@ function DataContainer(Type) {
                             this.setState({
                                 loadingComponent: false,
                                 error: true
-                            }))
+                            })
                         })
                         .then(data => {
                             this.setState((prevState, props) => ({
@@ -88,7 +88,7 @@ function DataContainer(Type) {
                             this.setState({
                                 loadingComponent: false,
                                 error: true
-                            }))
+                            })
                         })
                     }
                 }

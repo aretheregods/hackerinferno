@@ -11,7 +11,7 @@ export function Item(props) {
             <div className="detail-box">
                 {item.type === 'ask' || item.type === 'show' ?
                 <Link to={'/item/' + item.id} className="detail-child story-link"> {item.title} </Link> :
-                <Link to={item.url} className="detail-child story-link"> {item.title} </Link>
+                <a href={item.url} className="detail-child story-link"> {item.title} </a>
                 }
                 {item.user &&
                     <Link to={'/user/' + item.user} className="detail-child user-link">by <span className="user-id">{item.user}</span></Link>
