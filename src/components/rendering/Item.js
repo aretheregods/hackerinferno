@@ -9,7 +9,7 @@ export function Item(props) {
         <div key={item.id} className="list-item">
             <div className="item-number">{(props.index + 1) + ((props.page_number - 1) * 30)}</div>
             <div className="detail-box">
-                {item.type === 'ask' || item.type === 'show' ?
+                {item.type === 'ask' ?
                 <Link to={'/item/' + item.id} className="detail-child story-link"> {item.title} </Link> :
                 <a href={item.url} className="detail-child story-link"> {item.title} </a>
                 }
