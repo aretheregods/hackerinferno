@@ -13,8 +13,7 @@ import { Error } from './components/rendering/Error';
 
 // Simplest Route Configuration.
 // Inferno makes it seemingly impossible
-// To have virtually all functional components
-// & highlighted tabs on dynamic routing
+// To have highlighted tabs on dynamic routing
 export const routes = (
 	<Route component={App}>
         <IndexRoute component={Top} onEnter={() => window.scrollTo(0, 0)}></IndexRoute>

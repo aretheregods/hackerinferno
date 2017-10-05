@@ -43,17 +43,6 @@ export function HackerList(props) {
             <div id="pager">
                 <h4>
                     <Pager list={endpoint_path} page={page_number} more={data.length === 30} />
-                    {/* <span id="pager-span" style={{display:"flex","justify-content":"space-around"}}>
-                        {page_number > 1 ?
-                            <Link to={`/${endpoint_path}${page_number - 1}`}> {String.fromCharCode(8592)}Back</Link> :
-                            <a href={`/${endpoint_path}${page_number}`} style={{"pointer-events":"none",cursor:"default",color:"#D3D3D3"}}>{String.fromCharCode(8592)}Back</a>
-                        }
-                        {page_number}
-                        {more_pages ?
-                            <Link to={`/${endpoint_path}${forward_path}`}>More {String.fromCharCode(8594)}</Link> :
-                            <a href={`/${endpoint_path}${page_number}`} style={{"pointer-events":"none",cursor:"default",color:"#D3D3D3"}}>More {String.fromCharCode(8594)}</a>
-                        }
-                    </span> */}
                 </h4>
             </div>
         </div>
