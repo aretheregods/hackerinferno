@@ -1,4 +1,4 @@
-export function Hacker_User(props) {
+export function HackerUser(props) {
 
     const data = props.component_data;
     const hacker_submitted = 'https://news.ycombinator.com/submitted?id=';

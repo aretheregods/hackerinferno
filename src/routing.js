@@ -7,7 +7,7 @@ import {
 	Ask,
 	Jobs,
 	User,
-	Item
+	Comments
 } from './components/rendering/Views/Index';
 import { Error } from './components/rendering/Error';
 
@@ -24,7 +24,7 @@ export const routes = (
 		<Route path="/jobs/:page" component={Jobs} onEnter={() => window.scrollTo(0, 0)}></Route>
 		<Route path="/ask/:page" component={Ask} onEnter={() => window.scrollTo(0, 0)}></Route>
 		<Route path="/user/:page" component={User}></Route>
-		<Route path="/item/:page" component={Item} onEnter={() => window.scrollTo(0, 0)}></Route>
+		<Route path="/item/:page" component={Comments} onEnter={() => window.scrollTo(0, 0)}></Route>
 		<Route path="*" component={Error}></Route>
 	</Route>
 )
