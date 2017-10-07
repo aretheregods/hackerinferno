@@ -39,12 +39,12 @@ export function HackerList(props) {
     //  The List of paginated Stories
     return (
         <div id="hacker-list">
-            <div id="items">{list_items}</div>
             <div id="pager">
                 <h4>
                     <Pager list={endpoint_path} page={page_number} length={data.length} max_length={30} />
                 </h4>
             </div>
+            <div id="items">{list_items}</div>
         </div>
     )
 }
