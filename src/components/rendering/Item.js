@@ -3,7 +3,7 @@ import { Link } from 'inferno-router';
 export function Item(props) {
 
     const item = props.item
-
+    
 
     return (
         <div key={item.id} className="list-item">

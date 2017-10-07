@@ -1,10 +1,10 @@
 import { Link } from 'inferno-router';
 import { Item } from './Item'
 
-function Pager(props) {
+export function Pager(props) {
     const endpoint_path = props.list;
     const page_number = props.page;
-    const more_pages = props.more;
+    const more_pages = props.length >= props.max_length;
     const forward_path = !page_number ? 2 : page_number + 1;
     return (
         <span id="pager-span" style={{display:"flex","justify-content":"space-around"}}>
@@ -42,7 +42,7 @@ export function HackerList(props) {
             <div id="items">{list_items}</div>
             <div id="pager">
                 <h4>
-                    <Pager list={endpoint_path} page={page_number} more={data.length === 30} />
+                    <Pager list={endpoint_path} page={page_number} length={data.length} max_length={30} />
                 </h4>
             </div>
         </div>

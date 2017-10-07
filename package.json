@@ -15,5 +15,8 @@
     "build": "inferno-scripts build",
     "test": "inferno-scripts test --env=jsdom",
     "eject": "inferno-scripts eject"
+  },
+  "devDependencies": {
+    "inferno-test-utils": "^3.9.0"
   }
 }

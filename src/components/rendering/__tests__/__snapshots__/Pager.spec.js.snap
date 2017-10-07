@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Back as active and More as inactive anchor tags when there are fewer than 30 items on page 2 1`] = `
+<span
+  id="pager-span"
+  style={
+    Object {
+      "display": "flex",
+      "justify-content": "space-around",
+    }
+  }
+>
+  <a
+    href="/news/1"
+  >
+     
+    ←
+    Back
+  </a>
+  <a
+    href="/news/2"
+    style={
+      Object {
+        "color": "#D3D3D3",
+        "cursor": "default",
+        "pointer-events": "none",
+      }
+    }
+  >
+    More 
+    →
+  </a>
+</span>
+`;
+
+exports[`should render More as active and Back as inactive anchor tags when there are 30 items on page 1 1`] = `
+<span
+  id="pager-span"
+  style={
+    Object {
+      "display": "flex",
+      "justify-content": "space-around",
+    }
+  }
+>
+  <a
+    href="/news/1"
+    style={
+      Object {
+        "color": "#D3D3D3",
+        "cursor": "default",
+        "pointer-events": "none",
+      }
+    }
+  >
+    ←
+    Back
+  </a>
+  <a
+    href="/news/2"
+  >
+    More 
+    →
+  </a>
+</span>
+`;
+
+exports[`should render both Back and More as active when there are 30 items on page 2 1`] = `
+<span
+  id="pager-span"
+  style={
+    Object {
+      "display": "flex",
+      "justify-content": "space-around",
+    }
+  }
+>
+  <a
+    href="/news/1"
+  >
+     
+    ←
+    Back
+  </a>
+  <a
+    href="/news/3"
+  >
+    More 
+    →
+  </a>
+</span>
+`;
+
+exports[`should render both Back and More as inactive anchor tags when there are fewer than 30 items on page 1 1`] = `
+<span
+  id="pager-span"
+  style={
+    Object {
+      "display": "flex",
+      "justify-content": "space-around",
+    }
+  }
+>
+  <a
+    href="/news/1"
+    style={
+      Object {
+        "color": "#D3D3D3",
+        "cursor": "default",
+        "pointer-events": "none",
+      }
+    }
+  >
+    ←
+    Back
+  </a>
+  <a
+    href="/news/1"
+    style={
+      Object {
+        "color": "#D3D3D3",
+        "cursor": "default",
+        "pointer-events": "none",
+      }
+    }
+  >
+    More 
+    →
+  </a>
+</span>
+`;
