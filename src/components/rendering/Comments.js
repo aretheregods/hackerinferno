@@ -7,9 +7,9 @@ export function make_comments_list(hacker_obj) {
     const j = Object.values(hacker_obj).map(function find_comments(i, k) {
 
         // What will be returned inside each list
-        var response = [];
-        var to_render;
-        var the_one = typeof i === 'object' && i !== [];
+        let response = [];
+        let to_render;
+        let the_one = typeof i === 'object' && i !== [];
 
         // Check each data object to see if it's an array with stuff inside
         // If it is, it's the one we want
