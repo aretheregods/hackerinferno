@@ -8,7 +8,9 @@
     "inferno": "^3.9.0",
     "inferno-component": "^3.9.0",
     "inferno-router": "^3.9.0",
-    "inferno-scripts": "4.2.0"
+    "inferno-scripts": "4.2.0",
+    "jest-enzyme": "^4.0.0",
+    "react-test-renderer": "^16.0.0"
   },
   "scripts": {
     "start": "inferno-scripts start",

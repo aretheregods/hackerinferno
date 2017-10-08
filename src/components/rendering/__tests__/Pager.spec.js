@@ -2,7 +2,6 @@ import { render } from 'inferno';
 import { renderToSnapshot } from 'inferno-test-utils';
 import { Pager } from '../List.js';
 
-// Do the Pager test shit
 
 it('should render More as active and Back as inactive anchor tags when there are 30 items on page 1', () => {
     const snapshot = renderToSnapshot(
@@ -38,4 +37,3 @@ it('should render Back as active and More as inactive anchor tags when there are
 
     expect(snapshot).toMatchSnapshot()
 })
-

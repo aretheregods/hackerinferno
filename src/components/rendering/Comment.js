@@ -14,7 +14,7 @@ export function Comment(props) {
                 </div>
                 <div className="the-comment" dangerouslySetInnerHTML={{__html:obj["content"]}}></div>
             </div>
-            {more_comments}
+            {more_comments(obj)}
         </div>
     )
 }

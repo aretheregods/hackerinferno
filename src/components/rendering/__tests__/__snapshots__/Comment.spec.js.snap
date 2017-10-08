@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the top level comment and indent the nested comments 1`] = `
+Object {
+  "children": null,
+  "className": null,
+  "dom": null,
+  "flags": 8,
+  "key": null,
+  "props": Object {
+    "nested_comments": [Function],
+    "obj": Array [
+      Object {
+        "comments": Array [
+          Object {
+            "comments": Array [
+              Object {
+                "comments": Array [],
+                "comments_count": 0,
+                "content": "<p>B</p>",
+                "time_ago": "45 minutes ago",
+                "user": "b",
+              },
+              Object {
+                "comments": Array [],
+                "comments_count": 0,
+                "content": "<p>C</p>",
+                "time_ago": "30 minutes ago",
+                "user": "c",
+              },
+            ],
+            "comments_count": 2,
+            "content": "<p>A</p>",
+            "time_ago": "1 hour ago",
+            "user": "a",
+          },
+        ],
+        "comments_count": 3,
+        "points": 5,
+        "time_ago": "2 hours ago",
+        "user": "me",
+      },
+    ],
+  },
+  "ref": null,
+  "type": [Function],
+}
+`;

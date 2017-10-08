@@ -1,7 +1,7 @@
 import { Comment } from './Comment';
 import { Story } from './Story';
 
-function make_comments_list(hacker_obj) {
+export function make_comments_list(hacker_obj) {
 
     // Get the values of the data object
     const j = Object.values(hacker_obj).map(function find_comments(i, k) {
@@ -11,9 +11,9 @@ function make_comments_list(hacker_obj) {
 
         // Check each data object to see if it's an array with stuff inside
         // If it is, it's the one we want
-        if(typeof i === 'object' && i !== null) {
+        if(typeof i === 'object' && i !== []) {
             for(let obj of i) {
-                response.push(<Comment obj={obj} nested_comments={make_comments_list(obj)}/>)
+                response.push(<Comment obj={obj} nested_comments={make_comments_list}/>)
             }
         }
 

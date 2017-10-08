@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render "div" tag with information supplied by an object with user data 1`] = `
+<div
+  id="user-container"
+>
+  <h3
+    id="user-id"
+  >
+    something_whatever
+  </h3>
+  <div
+    id="user-info"
+  >
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>It doesn't matter.</p>",
+        }
+      }
+      id="about-container"
+    />
+    <div
+      id="user-data-container"
+    >
+      <p>
+        joined: 
+        2 years ago
+         | karma: 
+      </p>
+    </div>
+    <div
+      id="hacker-links"
+    >
+      <a
+        href="https://news.ycombinator.com/submitted?id=something_whatever"
+        id="hacker-submitted"
+      >
+        submitted | 
+      </a>
+      <a
+        href="https://news.ycombinator.com/threads?id=something_whatever"
+        id="hacker-commented"
+      >
+        commented | 
+      </a>
+      <a
+        href="https://news.ycombinator.com/favorites?id=something_whatever"
+        id="hacker-favourites"
+      >
+        favourites
+      </a>
+    </div>
+  </div>
+</div>
+`;
