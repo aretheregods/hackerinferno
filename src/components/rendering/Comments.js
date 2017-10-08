@@ -8,18 +8,21 @@ export function make_comments_list(hacker_obj) {
 
         // What will be returned inside each list
         var response = [];
+        var to_render;
+        var the_one = typeof i === 'object' && i !== [];
 
         // Check each data object to see if it's an array with stuff inside
         // If it is, it's the one we want
-        if(typeof i === 'object' && i !== []) {
+        if(the_one) {
             for(let obj of i) {
                 response.push(<Comment obj={obj} nested_comments={make_comments_list}/>)
             }
-        }
+            to_render = <div className="comments-list" style={{ "margin-left": `${k + 2}px` }}>{response}</div>;
+        } else { to_render = '' }
 
         // The margin of each comment sub-list is
         // The amount of the index of that sub-array plus 2 in pixels
-        return <div className="comments-list" style={{"margin-left":`${k + 2}px`}}>{response}</div>
+        return to_render;
 
     })
 

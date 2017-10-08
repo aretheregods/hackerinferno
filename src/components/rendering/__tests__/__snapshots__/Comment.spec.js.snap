@@ -1,48 +1,320 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should render the Story info and the list of associated comments 1`] = `
+<div
+  id="comments-container"
+>
+  <div
+    id="story-info"
+  >
+    <a
+      id="story-url"
+    />
+    <div>
+      <p>
+        by me 2 hours ago | 5 ☆
+      </p>
+    </div>
+  </div>
+  <div
+    id="comments-list"
+  >
+    <div>
+      <hr
+        id="comments-hr"
+      />
+      <h4>
+         Comments
+      </h4>
+    </div>
+    <div
+      className="comments-list"
+      style={
+        Object {
+          "margin-left": "7px",
+        }
+      }
+    >
+      <div>
+        <div
+          className="comment"
+        >
+          <div
+            className="comment-details"
+          >
+            <a
+              href="/user/a"
+            >
+              <p>
+                a
+              </p>
+            </a>
+            <p
+              className="comment-detaiil-child"
+            >
+               
+              1 hour ago
+            </p>
+          </div>
+          <div
+            className="the-comment"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>A</p>",
+              }
+            }
+          />
+        </div>
+        <div
+          className="comments-list"
+          style={
+            Object {
+              "margin-left": "6px",
+            }
+          }
+        >
+          <div>
+            <div
+              className="comment"
+            >
+              <div
+                className="comment-details"
+              >
+                <a
+                  href="/user/b"
+                >
+                  <p>
+                    b
+                  </p>
+                </a>
+                <p
+                  className="comment-detaiil-child"
+                >
+                   
+                  45 minutes ago
+                </p>
+              </div>
+              <div
+                className="the-comment"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>B</p>",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="comments-list"
+              style={
+                Object {
+                  "margin-left": "7px",
+                }
+              }
+            />
+          </div>
+          <div>
+            <div
+              className="comment"
+            >
+              <div
+                className="comment-details"
+              >
+                <a
+                  href="/user/c"
+                >
+                  <p>
+                    c
+                  </p>
+                </a>
+                <p
+                  className="comment-detaiil-child"
+                >
+                   
+                  30 minutes ago
+                </p>
+              </div>
+              <div
+                className="the-comment"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>C</p>",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="comments-list"
+              style={
+                Object {
+                  "margin-left": "7px",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`should render the top level comment and indent the nested comments 1`] = `
-Object {
-  "children": null,
-  "className": null,
-  "dom": null,
-  "flags": 8,
-  "key": null,
-  "props": Object {
-    "nested_comments": [Function],
-    "obj": Array [
+<div>
+  <div
+    className="comment"
+  >
+    <div
+      className="comment-details"
+    >
+      <a
+        href="/user/me"
+      >
+        <p>
+          me
+        </p>
+      </a>
+      <p
+        className="comment-detaiil-child"
+      >
+         
+        2 hours ago
+      </p>
+    </div>
+    <div
+      className="the-comment"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+    />
+  </div>
+  <div
+    className="comments-list"
+    style={
       Object {
-        "comments": Array [
+        "margin-left": "7px",
+      }
+    }
+  >
+    <div>
+      <div
+        className="comment"
+      >
+        <div
+          className="comment-details"
+        >
+          <a
+            href="/user/a"
+          >
+            <p>
+              a
+            </p>
+          </a>
+          <p
+            className="comment-detaiil-child"
+          >
+             
+            1 hour ago
+          </p>
+        </div>
+        <div
+          className="the-comment"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>A</p>",
+            }
+          }
+        />
+      </div>
+      <div
+        className="comments-list"
+        style={
           Object {
-            "comments": Array [
+            "margin-left": "6px",
+          }
+        }
+      >
+        <div>
+          <div
+            className="comment"
+          >
+            <div
+              className="comment-details"
+            >
+              <a
+                href="/user/b"
+              >
+                <p>
+                  b
+                </p>
+              </a>
+              <p
+                className="comment-detaiil-child"
+              >
+                 
+                45 minutes ago
+              </p>
+            </div>
+            <div
+              className="the-comment"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>B</p>",
+                }
+              }
+            />
+          </div>
+          <div
+            className="comments-list"
+            style={
               Object {
-                "comments": Array [],
-                "comments_count": 0,
-                "content": "<p>B</p>",
-                "time_ago": "45 minutes ago",
-                "user": "b",
-              },
+                "margin-left": "7px",
+              }
+            }
+          />
+        </div>
+        <div>
+          <div
+            className="comment"
+          >
+            <div
+              className="comment-details"
+            >
+              <a
+                href="/user/c"
+              >
+                <p>
+                  c
+                </p>
+              </a>
+              <p
+                className="comment-detaiil-child"
+              >
+                 
+                30 minutes ago
+              </p>
+            </div>
+            <div
+              className="the-comment"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>C</p>",
+                }
+              }
+            />
+          </div>
+          <div
+            className="comments-list"
+            style={
               Object {
-                "comments": Array [],
-                "comments_count": 0,
-                "content": "<p>C</p>",
-                "time_ago": "30 minutes ago",
-                "user": "c",
-              },
-            ],
-            "comments_count": 2,
-            "content": "<p>A</p>",
-            "time_ago": "1 hour ago",
-            "user": "a",
-          },
-        ],
-        "comments_count": 3,
-        "points": 5,
-        "time_ago": "2 hours ago",
-        "user": "me",
-      },
-    ],
-  },
-  "ref": null,
-  "type": [Function],
-}
+                "margin-left": "7px",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;

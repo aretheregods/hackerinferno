@@ -56,6 +56,7 @@ class DataContainer extends Component {
                 loadingComponent: false,
                 error: false
             });
+            console.log(data);
         })
         .catch(() => {
             this.setState({
