@@ -7,9 +7,14 @@ import {
 	Ask,
 	Jobs,
 	User,
-	Comments
+	// Comments
 } from './components/rendering/Views/Index';
 import { Error } from './components/rendering/Error';
+
+// Load Code to be split
+const Comments_Hacker = (props, cb) => import('./components/rendering/Comments.js').then(component => cb(null, component.default))
+
+const User_Hacker = (props, cb) => import('./components/rendering/User.js').then(component => cb(null, component.default))
 
 // Simplest Route Configuration.
 // Inferno makes it seemingly impossible
@@ -22,8 +27,8 @@ export const routes = (
 		<Route path="/show/:page" component={Show} onEnter={() => window.scrollTo(0, 0)}></Route>
 		<Route path="/jobs/:page" component={Jobs} onEnter={() => window.scrollTo(0, 0)}></Route>
 		<Route path="/ask/:page" component={Ask} onEnter={() => window.scrollTo(0, 0)}></Route>
-		<Route path="/user/:page" component={User}></Route>
-		<Route path="/item/:page" component={Comments} onEnter={() => window.scrollTo(0, 0)}></Route>
+		<Route path="/user/:page" getComponent={User_Hacker}></Route>
+		<Route path="/item/:page" getComponent={Comments_Hacker} onEnter={() => window.scrollTo(0, 0)}></Route>
 		<Route path="*" component={Error}></Route>
 	</Route>
 )

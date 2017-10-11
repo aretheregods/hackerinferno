@@ -8,8 +8,13 @@
       "type": "image/png"
     },
     {
+      "src": "infernologo.png",
+      "sizes": "327x327",
+      "type": "image/png"
+    },
+    {
       "src": "infernologo512.png",
-      "sizes": "512x512",
+      "sizes": "513x513",
       "type": "image/png"
     }
   ],

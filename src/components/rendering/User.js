@@ -1,3 +1,6 @@
+import { DataContainer } from '../data/Data-Container';
+import { hn_api_pages } from '../constants/API';
+
 export function HackerUser(props) {
 
     const data = props.component_data;
@@ -25,4 +28,13 @@ export function HackerUser(props) {
 
     return user_data;
 
+}
+
+export default function User({params}) {
+
+    return (
+        <DataContainer urlobj={hn_api_pages} endpoint="user" page={params.page}>
+            {({component_data}) => <HackerUser component_data={component_data}/>}
+        </DataContainer>
+    )
 }

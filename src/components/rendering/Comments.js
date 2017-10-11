@@ -1,5 +1,7 @@
 import { Comment } from './Comment';
 import { Story } from './Story';
+import { DataContainer } from '../data/Data-Container';
+import { hn_api_pages } from '../constants/API';
 
 export function make_comments_list(hacker_obj) {
 
@@ -51,4 +53,13 @@ export function HackerComments(props) {
 
     return story_data;
 
+}
+
+export default function Comments({params}) {
+
+    return (
+        <DataContainer urlobj={hn_api_pages} endpoint="item" page={params.page}>
+            {({component_data}) => <HackerComments component_data={component_data}/>}
+        </DataContainer>
+    )
 }
