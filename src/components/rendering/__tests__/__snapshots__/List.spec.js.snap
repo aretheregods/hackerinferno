@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render info about 3 stories in a div with a greyed out pager 1`] = `
+<div
+  id="hacker-list"
+>
+  <div
+    id="items"
+  >
+    <div
+      className="list-item"
+    >
+      <div
+        className="item-number"
+      />
+      <div
+        className="detail-box"
+      >
+        <a
+          className="detail-child story-link"
+          href="https://whateverblah.com/123456"
+        >
+           
+          something
+           
+        </a>
+        <a
+          className="detail-child user-link"
+          href="/user/a"
+        >
+          by 
+          <span
+            className="user-id"
+          >
+            a
+          </span>
+        </a>
+        <p
+          className="detail-child detail-box-bottom"
+        >
+          <span
+            className="score-star"
+          >
+            ★
+             
+          </span>
+          8 hours ago
+           
+          <a
+            className="bottom-child item-comments"
+            href="/item/1"
+          >
+             
+            <span
+              className="item-comments-span"
+            >
+               comments
+            </span>
+          </a>
+        </p>
+      </div>
+    </div>
+    <div
+      className="list-item"
+    >
+      <div
+        className="item-number"
+      />
+      <div
+        className="detail-box"
+      >
+        <a
+          className="detail-child story-link"
+          href="/item/2"
+        >
+           
+          somethingelse
+           
+        </a>
+        <a
+          className="detail-child user-link"
+          href="/user/b"
+        >
+          by 
+          <span
+            className="user-id"
+          >
+            b
+          </span>
+        </a>
+        <p
+          className="detail-child detail-box-bottom"
+        >
+          <span
+            className="score-star"
+          >
+            ★
+             
+          </span>
+          4 hours ago
+           
+          <a
+            className="bottom-child item-comments"
+            href="/item/2"
+          >
+             
+            <span
+              className="item-comments-span"
+            >
+               comments
+            </span>
+          </a>
+        </p>
+      </div>
+    </div>
+    <div
+      className="list-item"
+    >
+      <div
+        className="item-number"
+      />
+      <div
+        className="detail-box"
+      >
+        <a
+          className="detail-child story-link"
+          href="https://whateverblahfuck.com/1234567"
+        >
+           
+          somethingelseagain
+           
+        </a>
+        <a
+          className="detail-child user-link"
+          href="/user/c"
+        >
+          by 
+          <span
+            className="user-id"
+          >
+            c
+          </span>
+        </a>
+        <p
+          className="detail-child detail-box-bottom"
+        >
+          <span
+            className="score-star"
+          >
+            ★
+             
+          </span>
+          2 hours ago
+           
+          <a
+            className="bottom-child item-comments"
+            href="/item/3"
+          >
+             
+            <span
+              className="item-comments-span"
+            >
+               comments
+            </span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    id="pager"
+  >
+    <h4>
+      <span
+        id="pager-span"
+        style={
+          Object {
+            "display": "flex",
+            "justify-content": "space-around",
+          }
+        }
+      >
+        <a
+          href="/1"
+          style={
+            Object {
+              "color": "#D3D3D3",
+              "cursor": "default",
+              "pointer-events": "none",
+            }
+          }
+        >
+          ←
+          Back
+        </a>
+        <a
+          href="/1"
+          style={
+            Object {
+              "color": "#D3D3D3",
+              "cursor": "default",
+              "pointer-events": "none",
+            }
+          }
+        >
+          More 
+          →
+        </a>
+      </span>
+    </h4>
+  </div>
+</div>
+`;
