@@ -8,5 +8,6 @@ Inferno is awesome and maybe the best virtual DOM library. Check it out [here](h
 
 I'm Naythan Williams and not a wizard. But I did build this PWA all by my lonesome. You can check out my boring Twitter [here](https://twitter.come/aretheregods) or my hopefully slightly less boring Github [here](https://github.com/aretheregods).
 
-Now, go and build something awesome with InfernoJS. PS. You're allowed to use the structure of this PWA as a template for whatever awesome apps you build. I'm totally cool with that. But, remember, check out what architecture works best for whatever you're building. Peace.
+Now, go and build something awesome with InfernoJS. 
+PS: You're allowed to use the structure of this PWA as a template for whatever awesome apps you build. I'm totally cool with that. But, remember, check out what architecture works best for whatever you're building. Peace.
 
