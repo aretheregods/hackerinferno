@@ -14,7 +14,9 @@
   },
   "scripts": {
     "start": "inferno-scripts start",
+    "start:production": "inferno-scripts build && firebase serve --only functions,hosting",
     "build": "inferno-scripts build",
+    "deploy": "firebase deploy",
     "test": "inferno-scripts test --env=jsdom",
     "eject": "inferno-scripts eject"
   },
