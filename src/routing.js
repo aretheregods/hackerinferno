@@ -6,8 +6,6 @@ import {
 	Show,
 	Ask,
 	Jobs,
-	User,
-	// Comments
 } from './components/rendering/Views/Index';
 import { Error } from './components/rendering/Error';
 

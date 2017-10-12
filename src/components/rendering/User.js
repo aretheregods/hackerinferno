@@ -1,7 +1,7 @@
 import { DataContainer } from '../data/Data-Container';
 import { hn_api_pages } from '../constants/API';
 
-export function HackerUser(props) {
+function HackerUser(props) {
 
     const data = props.component_data;
     const hacker_submitted = 'https://news.ycombinator.com/submitted?id=';

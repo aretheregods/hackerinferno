@@ -32,7 +32,7 @@ export function make_comments_list(hacker_obj) {
 
 };
 
-export function HackerComments(props) {
+function HackerComments(props) {
 
     const data = props.component_data;
     const comments_state = data.comments_count
