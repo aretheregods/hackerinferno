@@ -1,6 +1,6 @@
 // Hacker News api locations
 // Use these in development
-/*export const  hn_api_pages = {
+/*export const  hn_api_endpoints = {
     news: (parameter = 1) => `https://hnpwa.com/api/v0/news.json?page=${parameter}`,
     newest: (parameter) => `https://hnpwa.com/api/v0/newest.json?page=${parameter}`,
     show: (parameter) => `https://hnpwa.com/api/v0/show.json?page=${parameter}`,
@@ -13,7 +13,7 @@
 
 
 // Use these in production
-export const hn_api_pages = {
+export const hn_api_endpoints = {
     news: (parameter = 1) => `/api/news.json?page=${parameter}`,
     newest: (parameter) => `/api/newest.json?page=${parameter}`,
     show: (parameter) => `/api/show.json?page=${parameter}`,

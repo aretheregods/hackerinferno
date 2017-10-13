@@ -95,17 +95,17 @@ class DataContainer extends Component {
     }
 
     render() {
-        var the_view;
+        var view;
 
         if(this.state.loadingComponent){
-            the_view = <HackerLoading/>
+            view = <HackerLoading/>
         } else if(this.state.error) {
-            the_view = <Error/>
+            view = <Error/>
         } else {
-            the_view = this.props.children({...this.props, ...this.state})
+            view = this.props.children({...this.props, ...this.state})
         }
 
-        return the_view;
+        return view;
     }
 
 }
