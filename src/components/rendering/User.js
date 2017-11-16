@@ -1,5 +1,5 @@
 import { DataContainer } from '../data/Data-Container';
-import { hn_api_pages } from '../constants/API';
+import { hn_api_endpoints } from '../constants/API';
 
 function HackerUser(props) {
 
@@ -33,7 +33,7 @@ function HackerUser(props) {
 export default function User({params}) {
 
     return (
-        <DataContainer urlobj={hn_api_pages} endpoint="user" page={params.page}>
+        <DataContainer urlobj={hn_api_endpoints} endpoint="user" page={params.page}>
             {({component_data}) => <HackerUser component_data={component_data}/>}
         </DataContainer>
     )
