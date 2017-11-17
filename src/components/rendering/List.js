@@ -33,7 +33,7 @@ export function HackerList(props) {
 
     // Basiic List Item Template
     const list_items = data.map(function(listobject, index) {
-        return <Item item={listobject} index={index} page_number={page_number}/>
+        return <Item item={listobject} index={index} page_number={page_number} ask={page_endpoint === 'ask'}/>
     });
 
     //  The List of paginated Stories
