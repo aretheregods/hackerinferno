@@ -17,17 +17,21 @@
       }
     ],
     "headers": [
-      {
+    {
+        "source": "**/*.js",
+        "headers": [{"key":"cache-control", "value":"max-age=86400"}]
+    },
+    {
         "source": "/",
-        "headers": [{"key":"Link","value":"</public/static/js/main.7112620c.js>;rel=preload;as=script,</api/news.json?page=1>;rel=preload;as=fetch"}]
+        "headers": [{"key":"Link","value":"</public/static/js/main.930090a2.js>;rel=preload;as=script,</api/news?page=1>;rel=preload;as=fetch"}]
     },
     {
         "source": "/item/**",
-        "headers": [{"key":"Link","value":"</public/static/js/main.7112620c.js>;rel=preload;as=script,</public/static/js/0.20860960.chunk.js>;rel=preload;as=script"}]
+        "headers": [{"key":"Link","value":"</public/static/js/main.930090a2.js>;rel=preload;as=script,</public/static/js/0.472a07b4.chunk.js>;rel=preload;as=script"}]
     },
     {
         "source": "/user/**",
-        "headers":[{"key":"Link","value":"</public/static/js/main.7112620c.js>;rel=preload;as=script,</public/static/js/1.0ca4c87a.chunk.js>;rel=preload;as=script"}]
+        "headers":[{"key":"Link","value":"</public/static/js/main.930090a2.js>;rel=preload;as=script,</public/static/js/1.512b6ac1.chunk.js>;rel=preload;as=script"}]
     }
     ]
   }

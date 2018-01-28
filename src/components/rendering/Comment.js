@@ -4,7 +4,7 @@ export function Comment(props) {
     const more_comments = props.nested_comments
 
     return (
-        <div>
+        <div key={obj["id"]}>
             <div className="comment">
                 <div className="comment-details">
                     <a href={`/user/${obj["user"]}`}>

@@ -46,7 +46,7 @@ function HackerComments(props) {
                     <hr id="comments-hr"/>
                     <h4>{data.comments ? comments_state : "Loading..."} Comments</h4>
                 </div>
-                {make_comments_list(data)}
+                <div hasKeyedChildren>{make_comments_list(data)}</div>
             </div>
         </div>
     )

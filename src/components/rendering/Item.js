@@ -13,13 +13,13 @@ export function Item(props) {
                 <Link to={'/item/' + item.id} className="detail-child story-link"> {item.title} </Link> :
                 <a href={item.url} className="detail-child story-link"> {item.title} </a>
                 }
-                {item.user &&
-                    <Link to={'/user/' + item.user} className="detail-child user-link">by <span className="user-id">{item.user}</span></Link>
-                }
                 <p className="detail-child detail-box-bottom">
+                {item.user &&
+                    <Link to={'/user/' + item.user} className="detail-child user-link">by <span className="user-id">{item.user}</span> &nbsp;</Link>
+                }
                 {item.points || "0"}
-                <span className="score-star">{String.fromCharCode(9733)}&nbsp; | &nbsp;</span>
-                {item.time_ago}&nbsp; | &nbsp;
+                <span className="score-star">{String.fromCharCode(9733)} &nbsp;</span>
+                {item.time_ago} &nbsp;
                 <Link to={'/item/'  + item.id} className="bottom-child item-comments"> {!item.comments_count ?
                     <span className="item-comments-span">Discuss</span> :
                     <span className="item-comments-span">{item.comments_count} comments</span>

@@ -4,6 +4,7 @@ import { Item } from './Item'
 export function Pager(props) {
     const endpoint_path = props.list;
     const page_number = props.page;
+    const show_next = ['', 'news', 'newest'];
     const more_pages = props.length >= props.max_length;
     const forward_path = !page_number ? 2 : page_number + 1;
     return (
@@ -13,7 +14,7 @@ export function Pager(props) {
                 <a href={`/${endpoint_path}${page_number}`} style={{"pointer-events":"none",cursor:"default",color:"#D3D3D3"}}>{String.fromCharCode(8592)}Back</a>
             }
             {page_number}
-            {more_pages ?
+            {more_pages || show_next.includes(endpoint_path) ?
                 <Link to={`/${endpoint_path}${forward_path}`}>More {String.fromCharCode(8594)}</Link> :
                 <a href={`/${endpoint_path}${page_number}`} style={{"pointer-events":"none",cursor:"default",color:"#D3D3D3"}}>More {String.fromCharCode(8594)}</a>
             }
@@ -33,13 +34,13 @@ export function HackerList(props) {
 
     // Basiic List Item Template
     const list_items = data.map(function(listobject, index) {
-        return <Item item={listobject} index={index} page_number={page_number} ask={page_endpoint === 'ask'}/>
+        return <Item item={listobject} index={index} page_number={page_number} ask={listobject["type"] === 'ask' || page_endpoint === 'ask'}/>
     });
 
     //  The List of paginated Stories
     return (
         <div id="hacker-list">
-            <div id="items">{list_items}</div>
+            <div id="items" hasKeyedChildren>{list_items}</div>
             <div id="pager">
                 <h4>
                     <Pager list={endpoint_path} page={page_number} length={data.length} max_length={30} />

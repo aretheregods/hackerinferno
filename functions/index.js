@@ -1,14 +1,23 @@
 const functions = require('firebase-functions');
-const hnapi = require('hnpwa-api');
+const fetch = require('node-fetch');
 
-exports.api = hnapi.trigger({
-    staleWhileRevalidate: 120,
-    routerPath: "/api"
+// exports.api = hnapi.trigger({
+//     staleWhileRevalidate: 120,
+//     routerPath: "/api"
+// })
+
+exports.api = functions.https.onRequest((req, res) => {
+    let path = req.path.slice(5);
+    let query = '';
+    for(let p in req.query) {
+        query = query || '?';
+        query += `${p}=${req.query[p]}`;
+    }
+    let url = `https://node-hnapi.herokuapp.com/${path}${query}`;
+    fetch(url).then(resp => {
+        resp.json().then(json => {
+            res.set('Cache-Control', 'public, max-age=600, s-maxage=600');
+            res.send(json);
+        })
+    })
 })
-
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });

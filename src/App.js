@@ -1,5 +1,4 @@
 import { Link, IndexLink } from 'inferno-router';
-import './registerServiceWorker';
 
 export function App({ children }) {
 
